@@ -1,14 +1,19 @@
 name: GitHub Pages
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: version
+        default: 1.0.0
+        required: false 
   push:
     branches:
       - master
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: Setup JohnSundell/Publish
         run: |
           cd ${HOME}
@@ -16,7 +21,6 @@ jobs:
           cd ./Publish
           swift build -c release
           echo "::add-path::${HOME}/Publish/.build/release"
-
       - run: publish-cli generate
 
       - name: Deploy to GitHub Pages
