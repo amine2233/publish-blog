@@ -18,7 +18,7 @@ struct BlogPublish: Website {
     // Update these properties to configure your website:
     var url = URL(string: "https://your-website-url.com")!
     var name = "BlogPublish"
-    var description = "A description of BlogPublish"
+    var description = "A description of BlogPublish Test"
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
