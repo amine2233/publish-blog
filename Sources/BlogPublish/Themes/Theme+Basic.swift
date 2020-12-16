@@ -13,13 +13,11 @@ public extension Theme {
 }
 
 private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
-    let stylesheetPaths: [Path] = ["/Resources/BasicTheme/styles.css"]
-
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site, stylesheetPaths: stylesheetPaths),
+            .head(for: index, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -46,7 +44,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: section, on: context.site, stylesheetPaths: stylesheetPaths),
+            .head(for: section, on: context.site),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
@@ -62,7 +60,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site, stylesheetPaths: stylesheetPaths),
+            .head(for: item, on: context.site),
             .body(
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID),
@@ -85,7 +83,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site, stylesheetPaths: stylesheetPaths),
+            .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(.contentBody(page.body)),
@@ -98,7 +96,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site, stylesheetPaths: stylesheetPaths),
+            .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -125,7 +123,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
                             context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site, stylesheetPaths: stylesheetPaths),
+            .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
