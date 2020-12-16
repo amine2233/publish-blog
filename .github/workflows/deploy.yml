@@ -1,29 +1,26 @@
 name: GitHub Pages
-
 on:
   push:
     branches:
       - master
-      
-      jobs:
-        deploy:
-          runs-on: ubuntu-20.04
-          steps:
-            - uses: actions/checkout@v2
-            
-            - name: Setup JohnSundell/Publish
-            run: |
-            cd ${HOME}
-            git clone --depth=1 https://github.com/JohnSundell/Publish.git
-            cd ./Publish
-            swift build -c release
-            echo "::add-path::${HOME}/Publish/.build/release"
-            
-            - run: publish-cli generate
-            
-            - name: Deploy to GitHub Pages
-            uses: peaceiris/actions-gh-pages@v3
-            with:
-              github_token: ${{ secrets.GITHUB_TOKEN }}
-              publish_dir: ./Output
-              
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup JohnSundell/Publish
+        run: |
+          cd ${HOME}
+          git clone --depth=1 https://github.com/JohnSundell/Publish.git
+          cd ./Publish
+          swift build -c release
+          echo "::add-path::${HOME}/Publish/.build/release"
+
+      - run: publish-cli generate
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Output
