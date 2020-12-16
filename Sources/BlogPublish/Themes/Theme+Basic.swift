@@ -13,7 +13,7 @@ public extension Theme {
 }
 
 private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
-    let stylesheetPaths: [Path] = ["/BasicTheme/styles.css"]
+    let stylesheetPaths: [Path] = ["/Resources/BasicTheme/styles.css"]
 
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
