@@ -8,17 +8,25 @@ struct BlogPublish: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case posts
+        case tips
+        case resume
         case about
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
-        // Add any site-specific metadata that you want to use here.
+        struct ResumeMetaData: WebsiteItemMetadata {
+            let name: String
+            let date: Date
+            let organization: String
+        }
+
+        var resume: ResumeMetaData?
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://your-website-url.com")!
-    var name = "BlogPublish"
-    var description = "A description of BlogPublish Test"
+    var url = URL(string: "https://aminebensalah.com")!
+    var name = "Amine Bensalah"
+    var description = "Personal website"
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
@@ -27,11 +35,13 @@ struct BlogPublish: Website {
 try BlogPublish().publish(using: [
     .copyResources(),
     .installPlugin(.splash(withClassPrefix: "")),
+    .installPlugin(.ensureAllItemsAreTagged),
     .addMarkdownFiles(),
+    .addDefaultSectionTitles(),
     .sortItems(by: \.date, order: .descending),
     .generateHTML(withTheme: .basic),
     .unwrap(RSSFeedConfiguration.default, { config in
-        .generateRSSFeed(including: [.posts], config: config)
+        .generateRSSFeed(including: [.posts, .tips], config: config)
     }),
     .generateSiteMap()
 ])
