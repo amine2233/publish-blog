@@ -21,11 +21,11 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
-                    .h1(.text(index.title)),
-                    .p(
-                        .class("description"),
-                        .text(context.site.description)
-                    ),
+//                    .h1(.text(index.title)),
+//                    .p(
+//                        .class("description"),
+//                        .text(context.site.description)
+//                    ),
                     .h2("Latest content"),
                     .itemList(
                         for: context.allItems(
@@ -185,11 +185,12 @@ private extension Node where Context == HTML.BodyContext {
             .class("item-list"),
             .forEach(items) { item in
                 .li(.article(
-                    .h1(.a(
-                        .href(item.path),
-                        .text(item.title)
-                    )),
-                    .h2(.text("Published on: \(item.date.asText)")),
+                    .span(
+                        .h1(.a(.href(item.path),.text(item.title))),
+                        .span(
+                            .text(item.date.asText)
+                        )
+                    ),
                     .tagList(for: item, on: site),
                     .p(.text(item.description))
                 ))
@@ -219,6 +220,31 @@ private extension Node where Context == HTML.BodyContext {
                 .text("RSS feed"),
                 .href("/feed.rss")
             ))
+        )
+    }
+}
+
+extension BasicHTMLFactory where Site == BlogPublish {
+    func makeItemHTML(for item: Item<Site>,
+                      context: PublishingContext<Site>) throws -> HTML {
+        HTML(
+            .lang(context.site.language),
+            .head(for: item, on: context.site),
+            .body(
+                .class("item-page"),
+                .header(for: context, selectedSection: item.sectionID),
+                .wrapper(
+                    .article(
+                        .div(
+                            .class("content"),
+                            .contentBody(item.body)
+                        ),
+                        .span("Tagged with: "),
+                        .tagList(for: item, on: context.site)
+                    )
+                ),
+                .footer(for: context.site)
+            )
         )
     }
 }
