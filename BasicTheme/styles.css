@@ -149,6 +149,12 @@ a {
     margin-bottom: 0;
 }
 
+.item-list-date p {
+    display: inline;
+    line-height: var(--line-height);
+    text-align: right;
+}
+
 .tag-list {
     margin-bottom: var(--margin);
 }
