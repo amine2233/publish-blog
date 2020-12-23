@@ -128,6 +128,48 @@ a {
     margin-bottom: var(--margin);
 }
 
+.float-container > * {
+    float: left;
+}
+
+.float-container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section-header {
+    line-height: 1.8em;
+}
+.section-header h2 {
+    display: inline-block;
+    float: left;
+    padding-left: 30px;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+h2.latest {
+    background-image: url(/images/latest-black.svg);
+}
+
+h2.posts {
+    background-image: url(/images/posts-black.svg);
+}
+
+h2.tips {
+    background-image: url(/images/tips-black.svg);
+}
+
+h2.resume {
+    background-image: url(/images/resume-black.svg);
+}
+
+h2.about {
+    background-image: url(/images/about-black.svg);
+}
+
 .item-list > li {
     display: block;
     padding: var(--margin);
@@ -270,6 +312,27 @@ pre code .preprocessing {
     header {
         background-color: var(--color-primary);
     }
+
+    h2.latest {
+        background-image: url(/images/latest-white.svg);
+    }
+
+    h2.posts {
+        background-image: url(/images/posts-white.svg);
+    }
+
+    h2.resume {
+        background-image: url(/images/resume-white.svg);
+    }
+
+    h2.about {
+        background-image: url(/images/about-white.svg);
+    }
+
+    h2.tips {
+        background-image: url(/images/tips-white.svg);
+    }
+
 }
 
 @media(max-width: var(--grid-maxWidth) {
