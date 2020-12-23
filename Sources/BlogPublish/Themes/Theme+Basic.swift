@@ -1,7 +1,7 @@
 import Plot
 import Publish
 
-public extension Theme {
+extension Theme where Site == BlogPublish {
     /// The default "Foundation" theme that Publish ships with, a very
     /// basic theme mostly implemented for demonstration purposes.
     static var basic: Self {
@@ -12,26 +12,29 @@ public extension Theme {
     }
 }
 
-private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
+private struct BasicHTMLFactory: HTMLFactory {
     func makeIndexHTML(for index: Index,
-                       context: PublishingContext<Site>) throws -> HTML {
+                       context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: index, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
-//                    .h1(.text(index.title)),
-//                    .p(
-//                        .class("description"),
-//                        .text(context.site.description)
-//                    ),
-                    .h2("Latest content"),
+                    .h1(.text(index.title)),
+                    .p(
+                        .class("description"),
+                        .text(index.description)
+                    ),
+                    .div(
+                        .h2("Latest content", .class("latest")),
+                        .class("section-header float-container")
+                    ),
                     .itemList(
                         for: context.allItems(
                             sortedBy: \.date,
                             order: .descending
-                        ),
+                        ).filter { $0.sectionID != .resume },
                         on: context.site
                     )
                 ),
@@ -40,15 +43,19 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
         )
     }
 
-    func makeSectionHTML(for section: Section<Site>,
-                         context: PublishingContext<Site>) throws -> HTML {
+    // Use this to render of index of section (articles, tips, about, resume)
+    func makeSectionHTML(for section: Section<BlogPublish>,
+                         context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: section, on: context.site),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
-                    .h1(.text(section.title)),
+                    .div(
+                        .h2(.text(section.title), .class("\(section.id.rawValue)")),
+                        .class("section-header float-container")
+                    ),
                     .itemList(for: section.items, on: context.site)
                 ),
                 .footer(for: context.site)
@@ -56,8 +63,8 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
         )
     }
 
-    func makeItemHTML(for item: Item<Site>,
-                      context: PublishingContext<Site>) throws -> HTML {
+    func makeItemHTML(for item: Item<BlogPublish>,
+                      context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: item, on: context.site),
@@ -68,6 +75,9 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
                     .article(
                         .div(
                             .class("content"),
+                            .if(item.metadata.resume.isSome,
+                                .p("\(item.metadata.resume?.name ?? "")")
+                            ),
                             .contentBody(item.body)
                         ),
                         .span("Tagged with: "),
@@ -80,7 +90,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
     }
 
     func makePageHTML(for page: Page,
-                      context: PublishingContext<Site>) throws -> HTML {
+                      context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
@@ -93,7 +103,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
     }
 
     func makeTagListHTML(for page: TagListPage,
-                         context: PublishingContext<Site>) throws -> HTML? {
+                         context: PublishingContext<BlogPublish>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
@@ -120,7 +130,7 @@ private struct BasicHTMLFactory<Site: Website>: HTMLFactory {
     }
 
     func makeTagDetailsHTML(for page: TagDetailsPage,
-                            context: PublishingContext<Site>) throws -> HTML? {
+                            context: PublishingContext<BlogPublish>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
@@ -224,27 +234,27 @@ private extension Node where Context == HTML.BodyContext {
     }
 }
 
-extension BasicHTMLFactory where Site == BlogPublish {
-    func makeItemHTML(for item: Item<Site>,
-                      context: PublishingContext<Site>) throws -> HTML {
-        HTML(
-            .lang(context.site.language),
-            .head(for: item, on: context.site),
-            .body(
-                .class("item-page"),
-                .header(for: context, selectedSection: item.sectionID),
-                .wrapper(
-                    .article(
-                        .div(
-                            .class("content"),
-                            .contentBody(item.body)
-                        ),
-                        .span("Tagged with: "),
-                        .tagList(for: item, on: context.site)
-                    )
-                ),
-                .footer(for: context.site)
-            )
-        )
-    }
-}
+//extension BasicHTMLFactory where Site == BlogPublish {
+//    func makeItemHTML(for item: Item<Site>,
+//                      context: PublishingContext<Site>) throws -> HTML {
+//        HTML(
+//            .lang(context.site.language),
+//            .head(for: item, on: context.site),
+//            .body(
+//                .class("item-page"),
+//                .header(for: context, selectedSection: item.sectionID),
+//                .wrapper(
+//                    .article(
+//                        .div(
+//                            .class("content"),
+//                            .contentBody(item.body)
+//                        ),
+//                        .span("Tagged with: "),
+//                        .tagList(for: item, on: context.site)
+//                    )
+//                ),
+//                .footer(for: context.site)
+//            )
+//        )
+//    }
+//}

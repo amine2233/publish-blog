@@ -6,6 +6,7 @@ import SplashPublishPlugin
 // This type acts as the configuration for your website.
 struct BlogPublish: Website {
     enum SectionID: String, WebsiteSectionID {
+        // associate rawValue with class on css
         // Add the sections that you want your website to contain here:
         case posts
         case tips
@@ -20,7 +21,12 @@ struct BlogPublish: Website {
             let organization: String
         }
 
+        struct PictureMetaData: WebsiteItemMetadata {
+            let icon: String
+        }
+
         var resume: ResumeMetaData?
+        var picture: PictureMetaData?
     }
 
     // Update these properties to configure your website:
