@@ -56,6 +56,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                         .h2(.text(section.title), .class("\(section.id.rawValue)")),
                         .class("section-header float-container")
                     ),
+                    .contentBody(section.body),
                     .itemList(for: section.items, on: context.site)
                 ),
                 .footer(for: context.site)

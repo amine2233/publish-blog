@@ -1,1 +1,3 @@
-# Tips
+---
+title: Tips
+---
