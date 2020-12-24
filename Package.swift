@@ -18,6 +18,7 @@ let package = Package(
         .target(
             name: "BlogPublish",
             dependencies: ["Publish", "SplashPublishPlugin"]
-        )
+        ),
+        .testTarget(name: "BlogPublishTests", dependencies: ["BlogPublish"])
     ]
 )

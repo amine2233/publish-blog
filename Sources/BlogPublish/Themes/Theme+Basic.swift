@@ -56,6 +56,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                         .h2(.text(section.title), .class("\(section.id.rawValue)")),
                         .class("section-header float-container")
                     ),
+                    .contentBody(section.body),
                     .itemList(for: section.items, on: context.site)
                 ),
                 .footer(for: context.site)
@@ -226,10 +227,27 @@ private extension Node where Context == HTML.BodyContext {
                     .href("https://github.com/johnsundell/publish")
                 )
             ),
-            .p(.a(
-                .text("RSS feed"),
-                .href("/feed.rss")
-            ))
+            .p( 
+                .a(
+                    .text("RSS feed"),
+                    .href("/feed.rss")
+                ),
+                .text(" | "),
+                .a(
+                    .text("Twitter"),
+                    .href("https://twitter.com/@amine2233")
+                ),
+                .text(" | "),
+                .a(
+                    .text("GitHub"),
+                    .href("https://github.com/amine2233")
+                ),
+                .text(" | "),
+                .a(
+                    .text("LinkedIn"),
+                    .href("https://www.linkedin.com/in/amine-bensalah-intech-consulting/")
+                )
+            )
         )
     }
 }

@@ -8,5 +8,3 @@ picture.icon: latest
 ---
 
 #  Test Resume
-
-
