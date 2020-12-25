@@ -45,6 +45,7 @@
     --margin: 20px;
     --margin-small: 6px;
     --border-radius: 16px;
+    --border-radius-small: 8px;
     --line-height: 1.5em;
 }
 
@@ -253,9 +254,10 @@ code {
 
 p code {
     background-color: var(--color-lightGrey);
-    padding: 0 var(--margin);
+    padding: 0 var(--margin-small);
     display: inline-block;
-    border-radius: 8px;
+    border-radius: var(--border-radius-small);
+    font-size: var(--font-size-footer);
     margin: 1px;
     line-break: anywhere;
 }
@@ -345,7 +347,7 @@ pre code .preprocessing {
         background-image: url(/images/tips-white.svg);
     }
     
-    p.code {
+    p > code {
         background-color: var(--color-lightGrey-inverse);
     }
 }
