@@ -252,7 +252,7 @@ code {
 }
 
 p code {
-    background-color: #e2e2e2;
+    background-color: var(--color-lightGrey);
     padding: 0 var(--margin);
     display: inline-block;
     border-radius: 8px;
@@ -344,7 +344,10 @@ pre code .preprocessing {
     h2.tips {
         background-image: url(/images/tips-white.svg);
     }
-
+    
+    p.code {
+        background-color: var(--color-lightGrey-inverse);
+    }
 }
 
 @media(max-width: var(--grid-maxWidth) {
