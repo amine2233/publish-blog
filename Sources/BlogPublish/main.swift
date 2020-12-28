@@ -27,6 +27,13 @@ struct BlogPublish: Website {
 
         var resume: ResumeMetaData?
         var picture: PictureMetaData?
+        var isEnabled: Bool = false
+
+        enum CodingKeys: String, CodingKey {
+            case resume
+            case picture
+            case isEnabled = "is_enabled"
+        }
     }
 
     // Update these properties to configure your website:
