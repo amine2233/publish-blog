@@ -49,6 +49,6 @@ try BlogPublish().publish(using: [
     .unwrap(RSSFeedConfiguration.default, { config in
         .generateRSSFeed(including: [.posts, .tips], config: config)
     }),
-    .createCNAME(website: "aminebensalah.fr"),
+    .createCNAME(website: "aminebensalah.com"),
     .generateSiteMap()
 ])
