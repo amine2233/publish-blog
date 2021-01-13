@@ -3,6 +3,11 @@ import Publish
 import Plot
 import SplashPublishPlugin
 
+enum Constants {
+    static let website = "aminebensalah.fr"
+    static let websiteUrl = "https://aminebensalah.fr"
+}
+
 // This type acts as the configuration for your website.
 struct BlogPublish: Website {
     enum SectionID: String, WebsiteSectionID {
@@ -30,7 +35,7 @@ struct BlogPublish: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://aminebensalah.com")!
+    var url = URL(string: Constants.websiteUrl)!
     var name = "Amine Bensalah"
     var description = "Personal website"
     var language: Language { .english }
@@ -49,6 +54,6 @@ try BlogPublish().publish(using: [
     .unwrap(RSSFeedConfiguration.default, { config in
         .generateRSSFeed(including: [.posts, .tips], config: config)
     }),
-    .createCNAME(website: "aminebensalah.com"),
+    .createCNAME(website: Constants.website),
     .generateSiteMap()
 ])
