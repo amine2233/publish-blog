@@ -191,10 +191,10 @@ private extension Node where Context == HTML.BodyContext {
         )
     }
 
-    static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
+    static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node where T.ItemMetadata == BlogPublish.ItemMetadata {
         return .ul(
             .class("item-list"),
-            .forEach(items) { item in
+            .forEach(items.filter { $0.metadata.published }) { item in
                 .li(.article(
                     .span(
                         .h1(.a(.href(item.path),.text(item.title))),

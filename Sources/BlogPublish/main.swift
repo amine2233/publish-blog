@@ -32,6 +32,13 @@ struct BlogPublish: Website {
 
         var resume: ResumeMetaData?
         var picture: PictureMetaData?
+        var published: Bool = false
+
+        enum CodingKeys: String, CodingKey {
+            case resume
+            case picture
+            case published
+        }
     }
 
     // Update these properties to configure your website:
@@ -52,7 +59,14 @@ try BlogPublish().publish(using: [
     .sortItems(by: \.date, order: .descending),
     .generateHTML(withTheme: .basic),
     .unwrap(RSSFeedConfiguration.default, { config in
-        .generateRSSFeed(including: [.posts, .tips], config: config)
+        let matcher = { (item: Item<BlogPublish>) -> Bool in
+            item.metadata.published
+        }
+        let predicate = Predicate<Item<BlogPublish>>(matcher: matcher)
+        return .generateRSSFeed(including: [.posts, .tips],
+                                itemPredicate: predicate,
+                                config: config,
+                                date: Date())
     }),
     .createCNAME(website: Constants.website),
     .generateSiteMap()
