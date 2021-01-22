@@ -1,8 +1,9 @@
 ---
+title: Setting up a Docker context
 date: 2020-12-24 17:20
 description: Docker context how to use-it to avoid `docker-machine` on Mac scilicone.
 tags: docker, mac-osx
-is_enabled: true
+published: true
 ---
 # Setting up a Docker context
 

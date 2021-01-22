@@ -5,7 +5,7 @@ resume.name: test
 resume.date: 2020-12-17 16:00
 resume.organization: String
 picture.icon: latest
-is_enabled: true
+published: true
 ---
 
 #  Test Resume
