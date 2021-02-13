@@ -1,21 +1,21 @@
 /**
-*  Publish Foundation theme
-*  Copyright (c) John Sundell 2019
-*  MIT license, see LICENSE file for details
-*/
+ *  Publish Foundation theme
+ *  Copyright (c) John Sundell 2019
+ *  MIT license, see LICENSE file for details
+ */
 /* Fonts */
 @font-face {
- font-family: "Main";
- src: url(/fonts/SourceSansPro-Regular.ttf);
+    font-family: "Main";
+    src: url(/fonts/SourceSansPro-Regular.ttf);
 }
 @font-face {
- font-family: "Main";
- src: url(/fonts/SourceSansPro-Bold.ttf);
- font-weight: bold;
+    font-family: "Main";
+    src: url(/fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
 }
 @font-face {
- font-family: "Code";
- src: url(/fonts/SourceCodePro-Regular.ttf);
+    font-family: "Code";
+    src: url(/fonts/SourceCodePro-Regular.ttf);
 }
 
 :root {
@@ -47,6 +47,10 @@
     --border-radius: 16px;
     --border-radius-small: 8px;
     --line-height: 1.5em;
+    --border-solid: 4px;
+    --padding-small: 8px;
+    --padding: 16px;
+    --padding-large: 24px;
 }
 
 * {
@@ -241,6 +245,19 @@ footer {
     color: var(--color-text-grey);
 }
 
+article p.info, blockquote p, .sponsorship .content > ul, .services .content > ul {
+    position: relative;
+    background-color: var(--color-lightGrey);
+    padding: var(--padding-small) var(--padding-small) var(--padding-small) var(--padding);
+    border-top-right-radius: var(--border-radius-small);
+    border-bottom-right-radius: var(--border-radius-small);
+    border-left: var(--border-solid) solid var(--color-primary);
+}
+
+article p.info, blockquote p, .services .content > ul, .sponsorship .content > ul, .sponsorship .packages .grid > li, .sponsorship a.email {
+    background-color: var(--color-lightGrey);
+}
+
 pre {
     margin-bottom: var(--margin);
     background-color: #1a1a1a;
@@ -348,6 +365,14 @@ pre code .preprocessing {
     }
     
     p > code {
+        background-color: var(--color-lightGrey-inverse);
+    }
+
+    article p.info, blockquote p, .services .content > ul, .sponsorship .content > ul, .sponsorship .packages .grid > li, .sponsorship a.email {
+        background-color: var(--color-lightGrey-inverse);
+    }
+
+    article p.info, blockquote p, .sponsorship .content > ul, .services .content > ul {
         background-color: var(--color-lightGrey-inverse);
     }
 }
