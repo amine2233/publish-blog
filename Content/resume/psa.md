@@ -5,6 +5,7 @@ description: All the articles.
 resume.name: change me with an introduction
 resume.date: 2021-02-07 16:00
 resume.organization: String
+published: true
 ---
 
 #  Lead Technique iOS (Swift & Objective-C), De Juin 2019 à Septembre

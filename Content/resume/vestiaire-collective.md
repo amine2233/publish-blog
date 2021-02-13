@@ -4,6 +4,7 @@ date: 2021-02-08 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-08 16:00
 resume.organization: String
+published: true
 ---
 
 # Sénior Développer iOS (Swift & Objective-C), De octobre 2019 à Mars 2020

@@ -4,6 +4,7 @@ date: 2021-02-03 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-03 16:00
 resume.organization: String
+published: true
 ---
 
 #  Ingénieur Étude & Développement Mobile, De Septembre 2014 à Décembre 2014
