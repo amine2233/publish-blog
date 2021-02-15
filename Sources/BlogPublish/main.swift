@@ -4,8 +4,8 @@ import Plot
 import SplashPublishPlugin
 
 enum Constants {
-    static let website = "aminebensalah.fr"
-    static let websiteUrl = "https://aminebensalah.fr"
+    static let website = "aminebensalah.com"
+    static let websiteUrl = "https://" + website
 }
 
 // This type acts as the configuration for your website.
