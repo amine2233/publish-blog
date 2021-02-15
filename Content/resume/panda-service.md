@@ -1,5 +1,5 @@
 ---
-description: All the articles.
+description: 
 date: 2021-02-03 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-03 16:00
@@ -7,20 +7,20 @@ resume.organization: String
 published: true
 ---
 
-#  Ingénieur Étude & Développement Mobile, De Septembre 2014 à Décembre 2014
+#  Computer Engineer on Mobile software, from Septembre 2014 to December 2014.
 
-## RÉALISATION :
+## Acheivment:
 
-* Développement d'applications pour iOS (iPhone & iPad).
+* Design of the iOS application architecture using MVC,
 
-* Encapsulation des Web Applications pour les intégrer à l’AppleStore.
+* Create a new application from scratch and update some other applications,
 
-* Mise à jour d’applications iOS (Wifi EasyConnecte, Echo-Live, …).
+* Create some iOS applications using web technologies,
 
-* Gestion des projets Mobiles avec la méthode Agile.
+* Update iOS applications (Wifi EasyConnecte, Echo-Live, …),
 
-* Suivi des projets avec les responsables techniques & les chefs de projet.
+* Manage software project using Agile concept with marketing and product teams,
 
-## ENVIRONNEMENT TECHNIQUE
+## Technical Environment:
 
-Objective C, C, BASH, GIT-Flow, Cocoapods, Mac OSX, COCOA, In‑App Purchase
+Objective-C, C, BASH, GIT-Flow, Cocoapods, Mac OSX, COCOA, In‑App Purchase.

@@ -1,5 +1,5 @@
 ---
-description: All the articles.
+description:
 date: 2021-02-01 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-01 16:00
@@ -7,20 +7,20 @@ resume.organization: Miyoa
 published: true
 ---
 
-#  Ingénieur Développement iOS, De Mai à Septembre 2011 (5 mois)
+#  iOS Developper at Miyowa, from May to September 2011 (5 months)
 
-## RÉALISATION :
+## Achievement:
 
-* Rédaction des spécifications fonctionnelles & techniques.
+* Writing of functional & technical specifications,
 
-* Conception de l’architecture de l’application.
+* Design of the application architecture using MVC,
 
-* Développement d'applications Mobiles pour iOS
+* Development of mobile applications for iOS using Objective-C from scratch,
 
-* Intégration de la communication Client/Serveur,
+* Integration of Client/Server communications without a third party library,
 
-* Administration des approvisionnements dans le portail Apple développeur.
+* Adding in-app purchase to buy some additional premium featues,
 
-## ENVIRONNEMENT TECHNIQUE
+## Technical environment:
 
-Mac OSX, Objective C 2.0, Mercurial, Cocoa (CoreData), JSON, In‑App Purchase,
+Mac OSX, Objective C 2.0, Mercurial, Cocoa (CoreData), JSON, In‑App Purchase, REST Api, NSURLSession, Contact Sdk

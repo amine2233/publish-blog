@@ -1,5 +1,5 @@
 ---
-description: All the articles.
+description: 
 date: 2021-02-02 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-02 16:00
@@ -7,22 +7,23 @@ resume.organization: String
 published: true
 ---
 
-#  Ingénieur Étude & Développement Mobile & Web, De Janvier 2012 à Mai 2014
+#  Computer Engineer for Mobile and Web Project, from January 2012 to Mai 2014
 
-## RÉALISATION :
+## Acheivment:
 
-* Analyse des besoins du client, rédaction des spécifications fonctionnelles & techniques.
 
-* Développement d'application pour iOS (iPhone & iPad).
+* Take customer and client needs analysis, write specifications and fonctional documentations,
 
-* Développement d'application Web en PHP avec le Framwork Symfony ou CakePHP
+* Bring Agile methodologies to manage easely all the projects into the company,
 
-* Développement de WebService en REST avec PHP ou J2EE.
+* Development of mobile applications for iOS using Objective-C from scratch,
 
-* Conception des Bases de données avec MySQL & SQLite.
+* Development of backend applications for the mobile using PHP/MySql with Symfony framework or CakePHP,
 
-* Gestion des projets Mobiles & Web en Agile, suivi des projets avec les clients & les différents développeurs.
+* Design the database using UML for MySQL & SQLite,
 
-## ENVIRONNEMENT TECHNIQUE
+* Manage mobile and backend applications with different clients,
 
-Objective C, PHP, Symfony, CakePHP, C, Java, JEE 6, BASH, MySql, PostgreSQL, JSTL, JSP, CSS, JavaScript, GIT, Mac OSX, Ubuntu Server, Debian Server, COCOA, Android, REST, In‑App Purchase
+## Technical Environment:
+
+Objective C, PHP, Symfony, CakePHP, C, Java, JEE 6, BASH, MySql, PostgreSQL, JSTL, JSP, CSS, JavaScript, GIT, Mac OSX, Ubuntu Server, Debian Server, COCOA, REST API, In‑App Purchase
