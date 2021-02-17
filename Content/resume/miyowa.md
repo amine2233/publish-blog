@@ -1,7 +1,6 @@
 ---
 description:
 date: 2021-02-01 16:00
-resume.name: change me with an introduction
 resume.date: 2021-02-01 16:00
 resume.organization: Miyoa
 published: true

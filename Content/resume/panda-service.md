@@ -1,9 +1,8 @@
 ---
 description: 
 date: 2021-02-03 16:00
-resume.name: change me with an introduction
 resume.date: 2021-02-03 16:00
-resume.organization: String
+resume.organization: Panda Service
 published: true
 ---
 

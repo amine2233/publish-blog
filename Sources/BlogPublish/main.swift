@@ -21,7 +21,6 @@ struct BlogPublish: Website {
 
     struct ItemMetadata: WebsiteItemMetadata {
         struct ResumeMetaData: WebsiteItemMetadata {
-            let name: String
             let date: Date
             let organization: String
         }

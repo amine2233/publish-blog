@@ -76,9 +76,6 @@ private struct BasicHTMLFactory: HTMLFactory {
                     .article(
                         .div(
                             .class("content"),
-                            .if(item.metadata.resume.isSome,
-                                .p("\(item.metadata.resume?.name ?? "")")
-                            ),
                             .contentBody(item.body)
                         ),
                         .span("Tagged with: "),
