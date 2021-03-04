@@ -1,30 +1,37 @@
 ---
-description: All the articles.
+description: Development of the PriceMinister e-commerce application for iOS (iPhone & iPad). ...
 date: 2021-02-05 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-05 16:00
-resume.organization: String
+resume.organization: Rakuten
 published: true
+isDateHidden: true
 ---
 
-#  Ingénieur Étude & Développement Mobile, De Février 2016 à Mai 2018
+# Computer Engineer for iOS Mobile Project at Rakuten
 
-## RÉALISATION :
+> from February 2016 to Mai 2018
 
-* Développement de l’application e-commerce de PriceMinister pour iOS (iPhone & iPad).
+## Acheivment :
 
-* Création des signatures API en collaboration avec d’autres pôles afin d’implémenter les connexions client/serveur, refonte totale de la partie communication client/serveur en Swift & Alamofire.
+* Development of the PriceMinister e-commerce application for iOS (iPhone & iPad).
 
-* Refonte de l’architecture visuelle en TabBar afin de rajouter des nouvelles fonctionnalités et d’augmenter le temps de session des utilisateurs.
+* Creation of Mbile Request API in collaboration with other teams to implement client/server connections using Swift & Alamofire.
 
-* Création des composants graphiques afin de les réutiliser et d’avoir une charte graphique  (Design System) unifiée et facilement modifiable
+* Redesign of the visual and internal architectures to add new features easly and increase user session time.
 
-* Implémentation d’une nouvelle architecture (MVVM & VIPER & Coordinator Pattern) afin d’ajouter des tests unitaires, ajout de SwiftLint afin d’avoir un code style bien propre à l’application et de faciliter l’intégration d’autres développeurs.
+* Creation of graphical components in order to reuse them and to unify the design and easily create the new views using the (Design System).
 
-* CodeReview via Bitbucket afin d’améliorer le code et déploiement automatique des applications sur l’Appstore via Fastlane & utilisation de Fabric pour les version Beta
-Animation des dailies meetings, organisation des démos et rétrospectives.
+* Implementation of a new architecture (MVVM & VIPER & Coordinator Pattern) in order to add unit tests. 
 
-## ENVIRONNEMENT TECHNIQUE
+* Integration of SwiftLint in order to have a very specific code style and to facilitate the integration of others developers.
+
+* CodeReview via Bitbucket to improve code, automatic deployment of applications on the Appstore via Fastlane/Jenkins using Fabric for Beta versions
+and Testflight,
+
+* Animation of dailies meetings, organization of demos and retrospectives.
+
+## Technical environment:
 
 Objective C, Swift, BASH, GIT-Flow, Mac OSX, COCOA, JIRA, HipChat, JSON, REST, Postman, MVVM, VIPER, Coordinator, Deeplink, Alamofire, Codable, SwiftLint, Jenkins, Fastlane, Fabric, Bitbucket, Jira
 

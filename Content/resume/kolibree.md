@@ -1,26 +1,29 @@
 ---
-description: All the articles.
+description: Development of new features, maintain the ios application, MVVM architecture with RxSwift, resolution of issues, create a unit tests. ...
 date: 2021-02-09 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-09 16:00
-resume.organization: String
+resume.organization: Kolibree
 published: true
+isDateHidden: true
 ---
 
-# Sénior Développer iOS (Swift & Objective-C), De Mars 2020 à Août 2020
+# Senior Engineer for Mobile Project at Kolibree
 
-## RÉALISATION :
+> from March 2020 to August 2020
 
-* Développement des nouvelles fonctionnalités, maintien de l’application, architecture MVVM avec RxSwift, résolution des bugs, ajout des tests unitaires,
+## Acheivment:
 
-* Développement d’une nouvelle application totalement indépendante pour l’Apple watch avec SwiftUI & Combine & Redux
+* Development of new features, maintain the ios application, MVVM architecture with RxSwift, resolution of issues, create a unit tests. 
 
-* Développement en modules afin de partager le code entre iPhone & la Watch
+* Development of a new independent application for Apple watch with SwiftUI & Combine using Redux architecture.
 
-* Relecture du code via des PR GitHub, 
+* Development using modules to share the code between iPhone & Watch.
 
-* Participation à un grand projet avec une équipe international, communication & meeting & documentation en Anglais, j’ai beaucoup appris en terme de développement et de travail en équipe. Nous avons développer une application pour l’apple watch en un mois.
+* Code proofreading via GitHub PR.
 
-## ENVIRONNEMENT TECHNIQUE
+* Participation in a large project with an international team, communication, meetings & documentation in English, I learned a lot in terms of development and teamwork. We developed an app for the apple watch in one month.
+
+## Technical Environment:
 
 XcodeGen, Swift, SwiftUI, Combine, Objective C, TestUnitaire, GIT-Trunck, Carthage, MVVM, GitHub, Jira, RxSwift, RxDataSource, RxFeedback, Dependency Injection, Modular App, BLE, Apple Signin

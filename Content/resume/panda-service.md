@@ -1,24 +1,27 @@
 ---
-description: 
+description: Create a new application from scratch using Objective-C and UIKit framework. ...
 date: 2021-02-03 16:00
 resume.date: 2021-02-03 16:00
 resume.organization: Panda Service
 published: true
+isDateHidden: true
 ---
 
-#  Computer Engineer on Mobile software, from Septembre 2014 to December 2014.
+#  Computer Engineer on Mobile software at Panda Service
+
+> from Septembre 2014 to December 2014.
 
 ## Acheivment:
 
-* Design of the iOS application architecture using MVC,
+* Design the iOS application using MVC architecture.
 
-* Create a new application from scratch and update some other applications,
+* Create a new application from scratch using Objective-C and UIKit framework.
 
-* Create some iOS applications using web technologies,
+* Create some iOS applications using web technologies & WebViews. 
 
-* Update iOS applications (Wifi EasyConnecte, Echo-Live, …),
+* Update iOS applications (Wifi EasyConnecte, Echo-Live, …). 
 
-* Manage software project using Agile concept with marketing and product teams,
+* Manage software project using Agile concept with marketing and product teams. 
 
 ## Technical Environment:
 

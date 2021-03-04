@@ -1,32 +1,34 @@
 ---
-title: Resume
 date: 2021-02-07 16:00
-description: All the articles.
+description: Supervision of the iOS team to help them develop their skills and develop a fast feature. ...
 resume.name: change me with an introduction
 resume.date: 2021-02-07 16:00
-resume.organization: String
+resume.organization: PSA
 published: true
+isDateHidden: true
 ---
 
-#  Lead Technique iOS (Swift & Objective-C), De Juin 2019 à Septembre
+# Lead Engineer for Mobile Project at PSA
 
-## RÉALISATION :
+> from June 2019 to September 2019
 
-* Encadrement d’une équipe de développeurs iOS afin de les aider à monter en compétences,
+## Acheivment :
 
-* Mise en place des bonnes pratiques pour faciliter le travail des développeurs (règle de codage, règle de formatage, documentation du code, maintien d’un wiki)
+* Supervision of the iOS team to help them develop their skills and develop a fast feature. 
 
-* Relecture du code via des PR GitHub, paire programming, mise en place des règles Git pour faciliter l’extraction des changes logs,
+* Implementation of best practices to facilitate the work between developers (coding rule SwiftLint, formatting rule SwiftFormat, code documentation Confluence, maintain the wiki)
 
-* Mise en place d’une Intégration continue et du déploiement continue avec TeamCity
+* Code proofreading via GitHub PR, programming pair, implementation of Git rules to facilitate the extraction of log changes. 
 
-* Développement de l’applications iOS en (Swift & Objective-C), maintenance et correction des bugs, ajout de nouvelles fonctionnalités, optimisation de l’application,
+* Implementation of continuous integration and continuous deployment with TeamCity. 
 
-* Refonte de l’architecte de l’application, mise en place de la Clean architecture avec MVVM, RxSwift & PromiseKit, Dependency Injection, Cache avec CoreData, mise en place des tests unitaires & tests fonctionnels,
+* Development of the iOS application in (Swift & Objective-C), maintenance and correction of bugs, addition of new features, optimization of the application. 
 
-* Audit de l’application mobile (Test de sécurité, déploiement automatique, Test unitaire, respect des bonnes pratiques, Clean Architecture, Recherche des fuites mémoire, …)
+* Introduce the new application architecture, implementation of the Clean architecture with MVVM, RxSwift & Future, Dependency Injection, Cache with CoreData, implementation of unit tests & functional tests,
 
-## ENVIRONNEMENT TECHNIQUE
+* Audit the ios application (Security test, automatic deployment, Unit test, compliance with best practices, Clean Architecture, Search for memory leaks, etc.)
+
+## Technical Environment:
 
 Swift, Objective C, GIT-Flow, CocoaPods, MVVM, TeamCity, GitHub, Jira, BLE, RxSwift, PromiseKit, Dependency Injection,
 

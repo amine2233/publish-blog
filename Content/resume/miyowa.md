@@ -1,24 +1,27 @@
 ---
-description:
+description: Mobile ios applications development from scratch using Objective-C. ...
 date: 2021-02-01 16:00
 resume.date: 2021-02-01 16:00
 resume.organization: Miyoa
 published: true
+isDateHidden: true
 ---
 
-#  iOS Developper at Miyowa, from May to September 2011 (5 months)
+#  iOS Developper at Miyowa
+
+> from May to September 2011 (5 months)
 
 ## Achievement:
 
-* Writing of functional & technical specifications,
+* Writing functional & technical specifications. 
 
-* Design of the application architecture using MVC,
+* Design the application architecture using MVC. 
 
-* Development of mobile applications for iOS using Objective-C from scratch,
+* Mobile ios applications development from scratch using Objective-C. 
 
-* Integration of Client/Server communications without a third party library,
+* Integration of Client/Server communications without a third party library. 
 
-* Adding in-app purchase to buy some additional premium featues,
+* Adding in-app purchase to buy some additionals premium featues. 
 
 ## Technical environment:
 

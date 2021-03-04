@@ -78,8 +78,12 @@ private struct BasicHTMLFactory: HTMLFactory {
                             .class("content"),
                             .contentBody(item.body)
                         ),
-                        .span("Tagged with: "),
-                        .tagList(for: item, on: context.site)
+                        .if(!item.tags.isEmpty,
+                            .div(
+                                .span("Tagged with: "),
+                                .tagList(for: item, on: context.site)
+                                )
+                            )
                     )
                 ),
                 .footer(for: context.site)
@@ -194,12 +198,17 @@ private extension Node where Context == HTML.BodyContext {
             .forEach(items.filter { $0.metadata.published }) { item in
                 .li(.article(
                     .span(
-                        .h1(.a(.href(item.path),.text(item.title))),
-                        .span(
-                            .text(item.date.asText)
-                        )
+                        .h1(.a(.href(item.path),.text(item.title)))
+                        // TODO: (2021/03/4) improve
+//                        .if(!item.metadata.isDateHidden,
+//                            .span(
+//                                .text(item.date.asText))
+//                        )
                     ),
-                    .tagList(for: item, on: site),
+                    .if(!item.tags.isEmpty,
+                        .tagList(for: item, on: site)
+                        )
+                    ,
                     .p(.text(item.description))
                 ))
             }

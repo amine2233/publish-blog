@@ -1,27 +1,29 @@
 ---
-description: 
+description: iOS Mobile applications developement from scratch using Objective-C.
 date: 2021-02-02 16:00
 resume.date: 2021-02-02 16:00
 resume.organization: Synthes 3D
 published: true
+isDateHidden: true
 ---
 
-#  Computer Engineer for Mobile and Web Project, from January 2012 to Mai 2014
+#  Computer Engineer for Mobile and Web Project at Sythes3D
+
+> from January 2012 to Mai 2014
 
 ## Acheivment:
 
+* Take customer and client needs analysis, write specifications and fonctional documentations. 
 
-* Take customer and client needs analysis, write specifications and fonctional documentations,
+* Bring Agile methodologies to manage easely all the projects into the company. 
 
-* Bring Agile methodologies to manage easely all the projects into the company,
+* iOS Mobile applications developement from scratch using Objective-C. 
 
-* Development of mobile applications for iOS using Objective-C from scratch,
+* Backend applications development from scratch using PHP/MySql with Symfony framework or CakePHP. 
 
-* Development of backend applications for the mobile using PHP/MySql with Symfony framework or CakePHP,
+* Design the database using UML for MySQL & SQLite databases. 
 
-* Design the database using UML for MySQL & SQLite,
-
-* Manage mobile and backend applications with different clients,
+* Manage mobile and backend applications with different clients. 
 
 ## Technical Environment:
 

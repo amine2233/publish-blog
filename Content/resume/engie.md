@@ -1,26 +1,29 @@
 ---
-description: All the articles.
+description: Cration of a new ios application (HOMNI) from scratch for iPhone & iPad using MVC and MVVM in some parts. ...
 date: 2021-02-04 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-04 16:00
-resume.organization: String
+resume.organization: Engie
 published: true
+isDateHidden: true
 ---
 
-#  Ingénieur Étude & Développement Mobile, De Janvier 2015 à Janvier 2016
+# Computer Engineer for Mobile Project at Engie
 
-## RÉALISATION :
+> from January 2015 to January 2016
 
-* Développement d'une application pour iOS (iPhone & iPad) du nom d’HOMNI.
+## Achievement :
 
-* Développement de la partie appairage avec des objets connectés en BLE.
+* Cration of a new ios application (HOMNI) from scratch for iPhone & iPad using MVC and MVVM in some parts. 
 
-* Implémentation de la couche client/serveur en AFNetworking,
+* Developement and integration of BLE part on Homni iOS project using C and Objectiv-C languages.
 
-* Création de la couche UI uniquement en natif (Calendrier, Graphes, TabBar, Contrôle du thermostat à distance),
+* Development for HTTP request part using AFNetworking.
 
-* Gestion du projet Mobile avec la méthodologie Agile, suivi des projets avec les chefs de projet de différentes équipes.
+* Working with the designer to create the UI part which is completly custom view using UIKit.
 
-## ENVIRONNEMENT TECHNIQUE
+* Mange the mobile project using agile concept with Trello, communication with third party teams.
+
+## Technical environment:
 
 Objective C, Swift, BASH, GIT-Flow, Cocoapods, Trello, REST, Netatmo, BLE, AFNetworking, Swagger.

@@ -1,26 +1,29 @@
 ---
-description: Vestiaire Collective.
+description: Development of a new feature (the news feed) with MVVM architecture (96% test coverage), application maintenance, updates, issues fixes, resolve retain cycle. ...
 date: 2021-02-08 16:00
 resume.name: change me with an introduction
 resume.date: 2021-02-08 16:00
-resume.organization: String
+resume.organization: VestiaireCollective
 published: true
+isDateHidden: true
 ---
 
-# Sénior Développer iOS (Swift & Objective-C), De octobre 2019 à Mars 2020
+# Sénior Engineer for Mobile Project at VestiaireCollective
 
-## RÉALISATION :
+> from October 2019 to March 2020
 
-* Développement d’une nouvelle feature (le fil d’actualité) en MVVM avec 96% de test coverage, maintenance de l’application, mise à jour, fix de bugs, fix retain cycle.
+## Acheivment:
 
-* Mise en place des bonnes pratiques (règle de codage (swift-lint), règle de formatage (swift-format), documentation du code, maintien d’un wiki sur GitLab)
+* Development of a new feature (the news feed) with MVVM architecture (96% test coverage), application maintenance, updates, issues fixes, resolve retain cycle.
 
-* Relecture du code via des MR GitLab, mise en place de Danger afin d’avoir certaine règle d’acceptation pour une merge request,
+* Implementation of best practices (coding rule (swift-lint), formatting rule (swift-format), code documentation, maintenance of a wiki on GitLab)
 
-* Mise à jour de Intégration continue et du déploiement continue avec Bitrise, Fastlane,
+* Code proofreading via MR GitLab, implementation of Danger tool in order to have certain acceptance rules for a merge request. 
 
-* Participation un projet magnifique avec une équipe international, communication & meeting & documentation en Anglais, Nous avons sorti une feature en un mois et demi c’était vraiment génial 
+* Continuous integration update and continuous deployment with Bitrise, Fastlane. 
 
-## ENVIRONNEMENT TECHNIQUE
+* Participation on a wonderful project with an international team, communication, meetings & documentation in English, We released a feature in two months and a half it was a really great experience.
+
+## Technical Environment:
 
 Swift, Objective C, TestUnitaire, GIT-Flow, CocoaPods, MVVM, Bitrise, GitLab, Jira, RxSwift, RxDataSource, RxFeedback, Redux, Dependency Injection, Module (framework), Apple Signin, ApplePay
