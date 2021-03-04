@@ -21,7 +21,6 @@ struct BlogPublish: Website {
 
     struct ItemMetadata: WebsiteItemMetadata {
         struct ResumeMetaData: WebsiteItemMetadata {
-            let name: String
             let date: Date
             let organization: String
         }
@@ -33,6 +32,7 @@ struct BlogPublish: Website {
         var resume: ResumeMetaData?
         var picture: PictureMetaData?
         var published: Bool = false
+        var isDateHidden: Bool = false
 
         enum CodingKeys: String, CodingKey {
             case resume
