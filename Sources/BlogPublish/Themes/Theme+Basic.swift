@@ -48,7 +48,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                          context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: section, on: context.site),
+            .head(for: section, on: context.site, themeColor: "#f17c37"),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
@@ -68,7 +68,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                       context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site),
+            .head(for: item, on: context.site, themeColor: "#f17c37"),
             .body(
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID),
@@ -95,7 +95,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                       context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .head(for: page, on: context.site, themeColor: "#f17c37"),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(.contentBody(page.body)),
@@ -108,7 +108,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                          context: PublishingContext<BlogPublish>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .head(for: page, on: context.site, themeColor: "#f17c37"),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -135,7 +135,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                             context: PublishingContext<BlogPublish>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .head(for: page, on: context.site, themeColor: "#f17c37"),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
