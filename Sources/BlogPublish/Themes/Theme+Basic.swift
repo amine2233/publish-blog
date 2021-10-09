@@ -17,7 +17,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                        context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site),
+            .head(for: index, on: context.site, themeColor: "#f17c37"),// var(root:--color-primary)
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
