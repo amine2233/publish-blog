@@ -6,7 +6,12 @@ let package = Package(
     name: "blog-publish",
     products: [
         .executable(
-            name: "blog-publish",
+            name: "app",
+            targets: ["App"]
+        ),
+        .library(
+            name: "BlogPublish",
+            type: .dynamic,
             targets: ["BlogPublish"]
         )
     ],
@@ -15,6 +20,10 @@ let package = Package(
         .package(name: "SplashPublishPlugin", url: "https://github.com/johnsundell/splashpublishplugin", from: "0.1.0")
     ],
     targets: [
+        .target(
+            name: "App",
+            dependencies: ["BlogPublish"]
+        ),
         .target(
             name: "BlogPublish",
             dependencies: ["Publish", "SplashPublishPlugin"]
