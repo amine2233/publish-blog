@@ -17,7 +17,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                        context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site, themeColor: "#f17c37"),// var(root:--color-primary)
+            .head(for: index, on: context.site, themeColor: .light, themeDarkColor: .dark),// var(root:--color-primary)
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -48,7 +48,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                          context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: section, on: context.site, themeColor: "#f17c37"),
+            .head(for: section, on: context.site, themeColor: .light, themeDarkColor: .dark),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
@@ -68,7 +68,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                       context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site, themeColor: "#f17c37"),
+            .head(for: item, on: context.site, themeColor: .light, themeDarkColor: .dark),
             .body(
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID),
@@ -95,7 +95,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                       context: PublishingContext<BlogPublish>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site, themeColor: "#f17c37"),
+            .head(for: page, on: context.site, themeColor: .light, themeDarkColor: .dark),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(.contentBody(page.body)),
@@ -108,7 +108,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                          context: PublishingContext<BlogPublish>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site, themeColor: "#f17c37"),
+            .head(for: page, on: context.site, themeColor: .light, themeDarkColor: .dark),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -135,7 +135,7 @@ private struct BasicHTMLFactory: HTMLFactory {
                             context: PublishingContext<BlogPublish>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site, themeColor: "#f17c37"),
+            .head(for: page, on: context.site, themeColor: .light, themeDarkColor: .dark),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -241,17 +241,17 @@ private extension Node where Context == HTML.BodyContext {
                 .text(" | "),
                 .a(
                     .text("Twitter"),
-                    .href("https://twitter.com/@amine2233")
+                    .href(Constants.twitterUrl)
                 ),
                 .text(" | "),
                 .a(
                     .text("GitHub"),
-                    .href("https://github.com/amine2233")
+                    .href(Constants.githubUrl)
                 ),
                 .text(" | "),
                 .a(
                     .text("LinkedIn"),
-                    .href("https://www.linkedin.com/in/amine-bensalah-intech-consulting/")
+                    .href(Constants.linkedInUrl)
                 )
             )
         )

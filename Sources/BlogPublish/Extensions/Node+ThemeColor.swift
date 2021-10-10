@@ -1,7 +1,7 @@
 import Plot
 import Publish
 
-public extension Node where Context == HTML.DocumentContext {
+extension Node where Context == HTML.DocumentContext {
     /// Add an HTML `<head>` tag within the current context, based
     /// on inferred information from the current location and `Website`
     /// implementation.
@@ -17,8 +17,8 @@ public extension Node where Context == HTML.DocumentContext {
     static func head<T: Website>(
         for location: Location,
         on site: T,
-        themeColor: String,
-        themeDarkColor: String? = nil,
+        themeColor: ThemeColor,
+        themeDarkColor: ThemeColor? = nil,
         titleSeparator: String = " | ",
         stylesheetPaths: [Path] = ["/styles.css"],
         rssFeedPath: Path? = .defaultForRSSFeed,
@@ -47,7 +47,7 @@ public extension Node where Context == HTML.DocumentContext {
             .twitterCardType(location.imagePath == nil ? .summary : .summaryLargeImage),
             .forEach(stylesheetPaths, { .stylesheet($0) }),
             .viewport(.accordingToDevice),
-            .themeColor(themeColor, darkColor: themeDarkColor),
+            .themeColor(themeColor, inverseTheme: themeDarkColor),
             .unwrap(site.favicon, { .favicon($0) }),
             .unwrap(rssFeedPath, { path in
                 let title = rssFeedTitle ?? "Subscribe to \(site.name)"
@@ -64,10 +64,10 @@ public extension Node where Context == HTML.DocumentContext {
 extension Node where Context == HTML.HeadContext {
     /// Declare the HTML page's canonical URL, for social sharing and SEO.
     /// - parameter url: The URL to declare as this document's canonical URL.
-    static func themeColor(_ color: String, darkColor: String? = nil) -> Node {
+    static func themeColor(_ theme: ThemeColor, inverseTheme: ThemeColor? = nil) -> Node {
         return .group([
-            .meta(.name("theme-color"), .content(color), .attribute(named: "media", value: "(prefers-color-scheme: light)")),
-            .unwrap(darkColor, { .meta(.name("theme-color"), .content($0), .attribute(named: "media", value: "(prefers-color-scheme: dark)")) })
+            .meta(.name("theme-color"), .content(theme.primaryColor), .attribute(named: "media", value: "(prefers-color-scheme: light)")),
+            .meta(.name("theme-color"), .content(inverseTheme?.primaryColor ?? theme.primaryColor), .attribute(named: "media", value: "(prefers-color-scheme: dark)"))
         ])
     }
 }
