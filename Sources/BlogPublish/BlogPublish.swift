@@ -9,17 +9,12 @@ import Foundation
 import Publish
 import Plot
 
-enum Constants {
-    static let website = "aminebensalah.com"
-    static let websiteUrl = "https://" + website
-}
-
 // This type acts as the configuration for your website.
 struct BlogPublish: Website {
     enum SectionID: String, WebsiteSectionID {
         // associate rawValue with class on css
         // Add the sections that you want your website to contain here:
-        case posts
+        case posts // articles
         case tips
         case resume
         case about
@@ -44,13 +39,14 @@ struct BlogPublish: Website {
             case resume
             case picture
             case published
+            case isDateHidden
         }
     }
 
     // Update these properties to configure your website:
     var url = URL(string: Constants.websiteUrl)!
-    var name = "Amine Bensalah"
-    var description = "Personal website"
+    var name = Constants.me
+    var description = Constants.meDescription
     var language: Language { .english }
     var imagePath: Path? { nil }
 }

@@ -22,6 +22,7 @@
     --bg-color: #ffffff;
     --bg-color-inverse: #222;
     --color-primary: #f17c37;
+    --color-primary-inverse: #a04f1c;
     --color-lightGrey: #eeeeee;
     --color-lightGrey-inverse: #333;
     --color-grey: #747681;
@@ -68,6 +69,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-family-sans);
     text-align: center;
+    overflow:auto;
 }
 
 .wrapper {
@@ -80,7 +82,7 @@ body {
 
 header {
     background-color: var(--color-primary);
-    color: var(--color-text-inverse)
+    color: var(--color-text-inverse);
 }
 
 header .wrapper {
@@ -332,7 +334,7 @@ pre code .preprocessing {
 
 @media (prefers-color-scheme: dark) {
     meta[name="theme-color"] {
-        attr-content: var(--color-primary);
+        attr-content: var(--color-primary-inverse);
     }
 
     body {
@@ -344,12 +346,20 @@ pre code .preprocessing {
         color: var(--color-text-inverse);
     }
 
+    header {
+        background-color: var(--color-primary-inverse);
+    }
+
     .item-list > li {
         background-color: var(--color-lightGrey-inverse);
     }
 
     header {
-        background-color: var(--color-primary);
+        background-color: var(--color-primary-inverse);
+    }
+
+    .item-list > li {
+        background-color: var(--color-lightGrey-inverse);
     }
 
     h2.latest {
@@ -382,6 +392,12 @@ pre code .preprocessing {
 
     article p.info, blockquote p, .sponsorship .content > ul, .services .content > ul {
         background-color: var(--color-lightGrey-inverse);
+        border-left: var(--border-solid) solid var(--color-primary-inverse);
+    }
+
+    .tag-list li,
+    .tag {
+        background-color: var(--color-primary-inverse);
     }
 }
 
