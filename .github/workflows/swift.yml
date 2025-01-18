@@ -6,12 +6,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: "swift:5.4"
+      image: "swift:5.10"
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
+      - uses: actions/checkout@v2
+      - name: Build
+        run: swift build -v
 
-    - name: Run tests
-      run: swift test -v
+      - name: Run tests
+        run: swift test -v
