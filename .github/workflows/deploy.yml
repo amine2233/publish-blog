@@ -19,7 +19,9 @@ jobs:
         run: |
           git clone https://github.com/JohnSundell/Publish.git
           cd Publish
-          make
+          # make # sames not working so i copy/past the content below form make.install
+          swift build -c release
+          install .build/release/publish-cli /usr/local/bin/publish
 
       - name: Generate build number
         id: buildnumber
