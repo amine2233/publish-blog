@@ -20,7 +20,7 @@ let package = Package(
         .package(name: "SplashPublishPlugin", url: "https://github.com/johnsundell/splashpublishplugin", from: "0.1.0")
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "App",
             dependencies: ["BlogPublish"]
         ),
